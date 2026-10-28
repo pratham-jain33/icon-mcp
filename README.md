@@ -1,4 +1,5 @@
 # icon-mcp
+Offline MCP server providing searchable, parametric Lucide icons for AI assistants
 
 MCP server providing searchable, parametric Lucide icon sets for AI assistants.
 
@@ -21,7 +22,6 @@ AI assistants often fall back to emojis when a UI needs an icon, and creating a 
 - Simple MCP command exposing `search_icons` and `generate_icons` tools
 
 ## Installation
-
 ```bash
 pip install icon-mcp
 ```
@@ -66,6 +66,9 @@ Example Claude Desktop configuration (JSON):
   }
 }
 ```
+After restarting the assistant, you can ask for icons, e.g.,
+> "Find me a settings icon and a trash icon, both 1.5px stroke in #2f6bff at 32px, as SVGs."
+The assistant will call `search_icons` or `generate_icons` and receive styled SVG markup.
 
 After restarting the assistant, you can request icons such as:
 
